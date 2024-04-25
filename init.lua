@@ -77,6 +77,8 @@ vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
 -- or just use <C-\><C-n> to exit terminal mode
 vim.keymap.set('t', '<Esc><Esc>', '<C-\\><C-n>', { desc = 'Exit terminal mode' })
 
+vim.keymap.set({ 'n', 'v' }, ';', ':', { desc = "Don't have to press shift to start typing vim commands." })
+
 -- Disable arrow keys in normal mode
 vim.keymap.set('n', '<left>', '<cmd>echo "Use h to move!!"<CR>')
 vim.keymap.set('n', '<right>', '<cmd>echo "Use l to move!!"<CR>')
@@ -146,8 +148,7 @@ require('lazy').setup('plugins', {
   },
 })
 
-require('catppuccin').setup { flavour = 'mocha' }
-vim.cmd.colorscheme 'catppuccin'
+require 'company-spec'
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
