@@ -148,7 +148,7 @@ require('lazy').setup('plugins', {
   },
 })
 
-require 'company-spec'
+pcall(require, 'company-spec')
 
 -- The line beneath this is called `modeline`. See `:help modeline`
 -- vim: ts=2 sts=2 sw=2 et
